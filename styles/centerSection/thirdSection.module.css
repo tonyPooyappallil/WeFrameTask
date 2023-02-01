@@ -1,0 +1,35 @@
+.mainContainer {
+  margin-left: 36px;
+  margin-right: 36px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.firstContainer {
+  width: 249px;
+  border: 1px solid #ebeef2;
+  border-radius: 8px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.firstContainerInside {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: #606c80;
+}
+.firstContainerInside > div {
+  margin-left: 9px;
+}
+.firstContainerMiddle {
+  border-left: 1px solid #ebeef2;
+  height: 40px;
+}

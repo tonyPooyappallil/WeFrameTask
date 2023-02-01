@@ -1,0 +1,77 @@
+.mainContainer {
+  margin-left: 36px;
+  margin-right: 36px;
+  height: 88px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.outerContainer {
+  border-bottom: 1px solid #e9ebf0;
+}
+
+.lefter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.searchContainer {
+  width: 264px;
+  height: 48px;
+  display: flex;
+
+  align-items: center;
+  border: 1px solid #ebeef2;
+  box-shadow: 0px 1px 3px rgba(96, 108, 128, 0.05);
+  border-radius: 8px;
+}
+.mic {
+  margin-left: 37px;
+}
+.searchInsideContainer {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.searchBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.searchInput {
+  border: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  color: #98a2b3;
+  margin-left: 13px;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.contentTopPanelItemsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contentTopPanelItems {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  color: #7a8699;
+  margin-right: 32px;
+}
+.contentTopPanelRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.contentTopPanelRight > div {
+  margin-left: 23px;
+}
