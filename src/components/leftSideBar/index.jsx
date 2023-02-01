@@ -9,6 +9,7 @@ export const LeftSideBar = () => {
         <div className={styles.dashboard}>Dashboard</div>
         <div className={styles.dashboardSvgContainer}>{dashboardSvg}</div>
       </div>
+      <div className={styles.horLine}></div>
       <Content></Content>
     </>
   );
