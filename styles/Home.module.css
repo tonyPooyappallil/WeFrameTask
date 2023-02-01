@@ -1,2 +1,16 @@
-.container {
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+}
+.leftSideBarContainer {
+  width: 18.87%;
+  border: 1px solid #e9ebf0;
+}
+.centerContainer {
+  width: 75.62%;
+  border: 1px solid #e9ebf0;
+}
+.rightSideBarContainer {
+  width: 5.5%;
+  border: 1px solid #e9ebf0;
 }
