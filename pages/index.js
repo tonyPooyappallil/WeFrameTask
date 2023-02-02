@@ -5,7 +5,14 @@ import { LeftSideBar } from "../src/components/leftSideBar";
 import { RightSideBar } from "../src/components/rightSideBar";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+function return_url(context) {
+  if (process.env.NODE_ENV === "production") {
+    return `https://${context.req.rawHeaders[1]}`;
+  } else if (process.env.NODE_ENV !== "production") {
+    return "http://localhost:3000";
+  }
+}
+export default function Home({ data = [] }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -19,7 +26,7 @@ export default function Home() {
           <LeftSideBar></LeftSideBar>{" "}
         </div>
         <div className={styles.centerContainer}>
-          <ContentSection></ContentSection>
+          <ContentSection data={data}></ContentSection>
         </div>
         <div className={styles.rightSideBarContainer}>
           <RightSideBar></RightSideBar>
@@ -27,4 +34,13 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps(context) {
+  let url = return_url(context);
+  const response = await fetch(`${url}/api/taskData`);
+  console.log("response", response);
+  if (!response.ok) throw new Error(`Error: ${response.status}`);
+  const data = await response.json();
+  return { props: { data }, revalidate: 10 };
 }
