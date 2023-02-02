@@ -1,11 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
 import { ContentSection } from "../src/components/contentSection";
 import { LeftSideBar } from "../src/components/leftSideBar";
 import { RightSideBar } from "../src/components/rightSideBar";
 import styles from "../styles/Home.module.css";
 
-export default function Home({ data = [] }) {
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
@@ -19,7 +18,7 @@ export default function Home({ data = [] }) {
           <LeftSideBar></LeftSideBar>{" "}
         </div>
         <div className={styles.centerContainer}>
-          <ContentSection data={data}></ContentSection>
+          <ContentSection></ContentSection>
         </div>
         <div className={styles.rightSideBarContainer}>
           <RightSideBar></RightSideBar>
@@ -27,12 +26,4 @@ export default function Home({ data = [] }) {
       </div>
     </div>
   );
-}
-
-export async function getStaticProps(context) {
-  const response = await fetch(`/api/taskData`);
-  console.log("response", response);
-  if (!response.ok) throw new Error(`Error: ${response.status}`);
-  const data = await response.json();
-  return { props: { data }, revalidate: 10 };
 }

@@ -4,7 +4,7 @@ import { ThirdSection } from "./thirdSection";
 import { TaskRowSection } from "./taskRowSection";
 import useWindowDimensions from "../hooks/dimensioner";
 
-export const ContentSection = ({ data }) => {
+export const ContentSection = () => {
   const { width: windowWidth } = useWindowDimensions();
 
   return (
@@ -12,7 +12,7 @@ export const ContentSection = ({ data }) => {
       <TopPanel></TopPanel>
       <SecondPanel></SecondPanel>
       {windowWidth > 750 ? <ThirdSection></ThirdSection> : ""}
-      <TaskRowSection data={data}></TaskRowSection>{" "}
+      <TaskRowSection></TaskRowSection>{" "}
     </div>
   );
 };
