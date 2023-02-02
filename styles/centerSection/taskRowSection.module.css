@@ -8,3 +8,13 @@
   display: flex;
   flex-direction: row;
 }
+
+@media screen and (max-width: 750px) {
+  .taskSectionMainContainer {
+    margin-left: 36px;
+    margin-right: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

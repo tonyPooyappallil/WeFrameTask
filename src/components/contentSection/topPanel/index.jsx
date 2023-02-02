@@ -7,7 +7,10 @@ import {
   bellSvg,
 } from "../../../../data/svg";
 import { contentTopPanelItemsArray } from "../../../../data/contentTopPanelItems";
+import { useWidth } from "../../hooks/useWindowDimensions";
 export const TopPanel = () => {
+  const windowWidth = useWidth();
+
   return (
     <div className={styles.outerContainer}>
       <div className={styles.mainContainer}>
@@ -30,17 +33,26 @@ export const TopPanel = () => {
           </div>
           <div className={styles.mic}>{micSvg}</div>
         </div>
-        <div className={styles.contentTopPanelItemsContainer}>
-          {contentTopPanelItemsArray.map((e) => (
-            <div className={styles.contentTopPanelItems}>{e}</div>
-          ))}
-        </div>
+        {windowWidth > 750 ? (
+          <div className={styles.contentTopPanelItemsContainer}>
+            {contentTopPanelItemsArray.map((e) => (
+              <div className={styles.contentTopPanelItems}>{e}</div>
+            ))}
+          </div>
+        ) : (
+          ""
+        )}
+
         <div className={styles.contentTopPanelRight}>
           <div>{folderSvg}</div>
           <div> {bellSvg} </div>
-          <div>
-            <img src="/Avatar.jpg" alt="" />
-          </div>
+          {windowWidth > 750 ? (
+            <div>
+              <img src="/Avatar.jpg" alt="" />
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>

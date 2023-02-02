@@ -6,7 +6,10 @@ import { DashboardMenuItem } from "./dashboardMenuItem";
 import { dashboardMenuItemsDouble } from "../../../data/dashboardMenuItems";
 import { dashboardProjectsItems } from "../../../data/dashboardProjectsItems";
 import { AddNewProject } from "./addNewProject";
+import { useWidth } from "../hooks/useWindowDimensions";
 export const Content = () => {
+  const windowWidth = useWidth();
+
   return (
     <div className={styles.contentContainer}>
       <div className={styles.userContainer}>
@@ -15,14 +18,18 @@ export const Content = () => {
         </div>
         <div>
           <div className={styles.nancy}>Nancy Martino </div>
-          <div className={styles.position}>Designer</div>
+          {windowWidth > 750 ? (
+            <div className={styles.position}>Designer</div>
+          ) : (
+            ""
+          )}
         </div>
         <div>{userRightSvg}</div>
       </div>
       <div className={styles.dasboardMenuContainer}>
         <div className={styles.dasboardHeaderDiv}>
           <div className={styles.dashboardHeader}>DASHBOARDS</div>
-          <div>{dashboardMenuSvg}</div>
+          {windowWidth > 750 ? <div>{dashboardMenuSvg}</div> : ""}
         </div>
         {dashboardMenuItemsDouble.map((ev) => (
           <DashboardMenuItem ev={ev} />
@@ -31,7 +38,7 @@ export const Content = () => {
       <div className={styles.dasboardMenuContainer}>
         <div className={styles.dasboardHeaderDiv}>
           <div className={styles.dashboardHeader}>PROJECTS</div>
-          <div>{dashboardMenuSvg}</div>
+          {windowWidth > 750 ? <div>{dashboardMenuSvg}</div> : ""}
         </div>
         {dashboardProjectsItems.map((ev) => (
           <DashboardMenuItem ev={ev} />

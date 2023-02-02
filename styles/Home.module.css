@@ -5,6 +5,7 @@
 .leftSideBarContainer {
   width: 18.87%;
   border: 1px solid #e9ebf0;
+  min-width: 100px;
 }
 .centerContainer {
   width: 75.62%;
@@ -17,4 +18,5 @@
   top: 0px;
   right: 0px;
   height: 1005px;
+  min-width: 50px;
 }

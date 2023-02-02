@@ -1,11 +1,14 @@
 import styles from "../../../styles/leftSideBar.module.css";
+import { useWidth } from "../hooks/useWindowDimensions";
 
 export const DashboardMenuItem = ({ ev }) => {
+  const windowWidth = useWidth();
+
   return (
     <>
       <div className={styles.dashboardMenuItem}>
         <div className={styles.dashboardMenuItemLeftGroup}>
-          <div>{ev.left}</div>
+          {windowWidth > 750 ? <div>{ev.left}</div> : ""}
           <div className={styles.dashboardMenuItemText}>{ev.center}</div>
         </div>
         {ev.right ? (

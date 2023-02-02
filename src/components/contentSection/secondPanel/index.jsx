@@ -9,18 +9,27 @@ import {
   plusSvg,
 } from "../../../../data/svg";
 import { contentSecondPanelItemsArray } from "../../../../data/contentSecondPanelItems";
+import { useWidth } from "../../hooks/useWindowDimensions";
 export const SecondPanel = () => {
+  const windowWidth = useWidth();
+
   return (
     <div className={styles.mainContainer}>
       <div className={styles.lefter}>
         <div className={styles.taskBoard}>Task Boards</div>
         <div className={styles.mic}>{penSvg}</div>
       </div>
-      <div className={styles.contentTopPanelItemsContainer}>
-        {contentSecondPanelItemsArray.map((e) => (
-          <div className={styles.contentTopPanelItems}>{e}</div>
-        ))}
-      </div>
+
+      {windowWidth > 750 ? (
+        <div className={styles.contentTopPanelItemsContainer}>
+          {contentSecondPanelItemsArray.map((e) => (
+            <div className={styles.contentTopPanelItems}>{e}</div>
+          ))}
+        </div>
+      ) : (
+        <div></div>
+      )}
+
       <div className={styles.contentTopPanelRight}>
         <div className={styles.PeopleImgs}>
           <div>
