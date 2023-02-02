@@ -30,15 +30,7 @@ export default function Home({ data = [] }) {
 }
 
 export async function getStaticProps(context) {
-  function return_url(context) {
-    if (process.env.NODE_ENV === "production") {
-      return `https://we-frame-task.vercel.app`;
-    } else if (process.env.NODE_ENV !== "production") {
-      return "http://localhost:3000";
-    }
-  }
-  let url = return_url(context);
-  const response = await fetch(`${url}/api/taskData`);
+  const response = await fetch(`/api/taskData`);
   console.log("response", response);
   if (!response.ok) throw new Error(`Error: ${response.status}`);
   const data = await response.json();
