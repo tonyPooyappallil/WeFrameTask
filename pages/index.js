@@ -38,7 +38,7 @@ export async function getStaticProps(context) {
     }
   }
   let url = return_url(context);
-  const response = await fetch(`https://we-frame-task.vercel.app/api/taskData`);
+  const response = await fetch(`${url}/api/taskData`);
   console.log("response", response);
   if (!response.ok) throw new Error(`Error: ${response.status}`);
   const data = await response.json();
