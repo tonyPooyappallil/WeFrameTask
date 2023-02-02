@@ -1,0 +1,49 @@
+.headingContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.leftContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.taskCardContainer {
+  box-shadow: 0px 1px 3px rgba(96, 108, 128, 0.05);
+  border-radius: 8px;
+  padding: 20px;
+}
+.taskCardTop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.taskCardTopRight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.taskCardMiddle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.taskCardBottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.taskCardAvatars {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.taskCardBottomRight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

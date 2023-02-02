@@ -176,3 +176,59 @@ export const anotherPlusSvg = (
     />
   </svg>
 );
+
+export const equalSvg = (
+  <svg
+    width="18"
+    height="12"
+    viewBox="0 0 18 12"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M0 12H18V10H0V12ZM0 7H18V5H0V7ZM0 0V2H18V0H0Z" fill="#C7CED9" />
+  </svg>
+);
+export const lockSvg = (
+  <svg
+    width="16"
+    height="22"
+    viewBox="0 0 16 22"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M14 7.5H13V5.5C13 2.74 10.76 0.5 8 0.5C5.24 0.5 3 2.74 3 5.5V7.5H2C0.9 7.5 0 8.4 0 9.5V19.5C0 20.6 0.9 21.5 2 21.5H14C15.1 21.5 16 20.6 16 19.5V9.5C16 8.4 15.1 7.5 14 7.5ZM8 16.5C6.9 16.5 6 15.6 6 14.5C6 13.4 6.9 12.5 8 12.5C9.1 12.5 10 13.4 10 14.5C10 15.6 9.1 16.5 8 16.5ZM5 7.5V5.5C5 3.84 6.34 2.5 8 2.5C9.66 2.5 11 3.84 11 5.5V7.5H5Z"
+      fill="#B8BFCC"
+    />
+  </svg>
+);
+
+export const downArrowSvg = (
+  <svg
+    width="12"
+    height="8"
+    viewBox="0 0 12 8"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M2.125 0.999989L6.005 4.87999L9.885 0.999989C10.275 0.609989 10.905 0.609989 11.295 0.999989C11.685 1.38999 11.685 2.01999 11.295 2.40999L6.705 6.99999C6.315 7.38999 5.685 7.38999 5.295 6.99999L0.704998 2.40999C0.314998 2.01999 0.314998 1.38999 0.704998 0.999989C1.095 0.619989 1.735 0.609989 2.125 0.999989Z"
+      fill="#B8BFCC"
+    />
+  </svg>
+);
+
+export const threedotSvg = (
+  <svg
+    width="16"
+    height="4"
+    viewBox="0 0 16 4"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0ZM14 0C12.9 0 12 0.9 12 2C12 3.1 12.9 4 14 4C15.1 4 16 3.1 16 2C16 0.9 15.1 0 14 0ZM8 0C6.9 0 6 0.9 6 2C6 3.1 6.9 4 8 4C9.1 4 10 3.1 10 2C10 0.9 9.1 0 8 0Z"
+      fill="#C7CED9"
+    />
+  </svg>
+);
