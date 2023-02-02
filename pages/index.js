@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { ContentSection } from "../src/components/contentSection";
 import { LeftSideBar } from "../src/components/leftSideBar";
+import { RightSideBar } from "../src/components/rightSideBar";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -20,7 +21,9 @@ export default function Home() {
         <div className={styles.centerContainer}>
           <ContentSection></ContentSection>
         </div>
-        <div className={styles.rightSideBarContainer}>right</div>
+        <div className={styles.rightSideBarContainer}>
+          <RightSideBar></RightSideBar>
+        </div>
       </div>
     </div>
   );

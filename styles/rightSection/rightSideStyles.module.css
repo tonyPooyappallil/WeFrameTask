@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e9ebf0;
+}
+.firstDiv {
+  height: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #e9ebf0;
+  border-top: 1px solid #e9ebf0;
+}
+.secondDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.secondDiv > div {
+  padding-bottom: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.secondDiv * img {
+  width: 80%;
+}

@@ -1,3 +1,10 @@
 .taskSectionContainer {
   width: 264px;
+  margin-left: 14px;
+}
+.taskSectionMainContainer {
+  margin-left: 36px;
+  margin-right: 36px;
+  display: flex;
+  flex-direction: row;
 }

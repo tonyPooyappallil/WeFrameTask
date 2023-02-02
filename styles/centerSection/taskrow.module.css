@@ -3,32 +3,72 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
 }
 .leftContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1f2633;
+}
+.leftContainer :nth-child(2) {
+  width: 24px;
+  height: 24px;
+  background: rgba(234, 179, 8, 0.1);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+  color: #ca8a04;
 }
 .taskCardContainer {
-  box-shadow: 0px 1px 3px rgba(96, 108, 128, 0.05);
+  box-shadow: 0px 1px 3px rgba(50, 56, 66, 0.05);
   border-radius: 8px;
   padding: 20px;
+  background: #ffffff;
+  margin-bottom: 16px;
 }
 .taskCardTop {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  color: #1f2633;
 }
 .taskCardTopRight {
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 10px;
+  color: #17a5e6;
 }
+
+.taskCardTopRight :nth-child(1) {
+  margin-right: 5px;
+}
+
 .taskCardMiddle {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.taskCardMiddle > div {
+  background: #ffffff;
+  border: 1px solid #ebeef2;
+  border-radius: 16px;
+  font-weight: 800;
+  font-size: 8px;
+  padding: 5px;
+  text-align: center;
+
+  color: #606c80;
 }
 .taskCardBottom {
   display: flex;
@@ -41,9 +81,46 @@
   flex-direction: row;
   align-items: center;
 }
+.taskCardAvatars > div {
+  margin-left: -21px;
+  border-radius: 24px;
+}
+.taskCardAvatars :nth-child(1) {
+  margin-left: 0px;
+}
+
+.taskCardAvatars * img {
+  width: 90%;
+}
+
+.taskCardAvatars * {
+  border-radius: 50%;
+}
 
 .taskCardBottomRight {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  font-weight: 800;
+  font-size: 10px;
+  color: #17a5e6;
+}
+.taskCardBottomRight > div {
+  margin-right: 10px;
+}
+
+.taskCardContainer > div {
+  margin-bottom: 12px;
+}
+
+.addmoreContainer {
+  width: 264px;
+  height: 32px;
+  background: #ffffff;
+  border: 1px solid #f2f4f7;
+  box-shadow: 0px 1px 3px rgba(96, 108, 128, 0.05);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }

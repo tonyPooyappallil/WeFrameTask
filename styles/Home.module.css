@@ -9,8 +9,12 @@
 .centerContainer {
   width: 75.62%;
   border: 1px solid #e9ebf0;
+  border-right: none;
 }
 .rightSideBarContainer {
   width: 5.5%;
-  border: 1px solid #e9ebf0;
+  position: sticky;
+  top: 0px;
+  right: 0px;
+  height: 1005px;
 }

@@ -1,4 +1,10 @@
-import { threedotSvg } from "../../../../data/svg";
+import {
+  addmoreSvg,
+  attachmentSvg,
+  commentsSvg,
+  fileTickSvg,
+  threedotSvg,
+} from "../../../../data/svg";
 import styles from "../../../../styles/centerSection/taskrow.module.css";
 export const TaskRow = ({ data }) => {
   const getAvatars = (count) => {
@@ -27,7 +33,7 @@ export const TaskRow = ({ data }) => {
           <div className={styles.taskCardTop}>
             <div className={styles.taskCardTopTitle}>{ev.title}</div>
             <div className={styles.taskCardTopRight}>
-              <div>svg</div>
+              <div>{fileTickSvg}</div>
               <div>{ev.count}</div>
             </div>
           </div>
@@ -38,18 +44,18 @@ export const TaskRow = ({ data }) => {
           </div>
           <div className={styles.taskCardBottom}>
             <div className={styles.taskCardAvatars}>
-              {" "}
               {getAvatars(ev.avatars)}
             </div>
             <div className={styles.taskCardBottomRight}>
-              <div>svg</div>
+              <div>{attachmentSvg}</div>
               <div>{ev.attachments}</div>
-              <div>svg</div>
+              <div> {commentsSvg}</div>
               <div>{ev.comments}</div>
             </div>
           </div>
         </div>
       ))}
+      <div className={styles.addmoreContainer}>{addmoreSvg}</div>
     </div>
   );
 };
