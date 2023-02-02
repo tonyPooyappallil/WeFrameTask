@@ -48,6 +48,7 @@
   font-size: 12px;
   color: #98a2b3;
   margin-left: 13px;
+  background-color: #f7f8fa;
 }
 
 .searchInput:focus {
@@ -104,7 +105,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
-    color: #98a2b3;
+    color: #f7f8fa;
     margin-left: 13px;
     width: 80px;
   }
