@@ -32,7 +32,7 @@ export default function Home({ data = [] }) {
 export async function getStaticProps(context) {
   function return_url(context) {
     if (process.env.NODE_ENV === "production") {
-      return `https://${context.req.rawHeaders[1]}`;
+      return `https://we-frame-task.vercel.app`;
     } else if (process.env.NODE_ENV !== "production") {
       return "http://localhost:3000";
     }
