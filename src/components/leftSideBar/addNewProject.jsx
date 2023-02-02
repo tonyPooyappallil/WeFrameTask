@@ -1,9 +1,8 @@
 import styles from "../../../styles/leftSideBar.module.css";
 import { addNewProjectSvg } from "../../../data/svg";
-import { useWidth } from "../hooks/useWindowDimensions";
+import useWindowDimensions from "../hooks/dimensioner";
 export const AddNewProject = () => {
-  const windowWidth = useWidth();
-
+  const { width: windowWidth } = useWindowDimensions();
   return (
     <div className={styles.addNewProjectContainer}>
       <div className={styles.dashboardMenuItem}>

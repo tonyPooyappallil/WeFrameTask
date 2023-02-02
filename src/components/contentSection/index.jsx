@@ -2,18 +2,17 @@ import { SecondPanel } from "./secondPanel";
 import { TopPanel } from "./topPanel";
 import { ThirdSection } from "./thirdSection";
 import { TaskRowSection } from "./taskRowSection";
-import { useWidth } from "../hooks/useWindowDimensions";
+import useWindowDimensions from "../hooks/dimensioner";
 
 export const ContentSection = () => {
-  const windowWidth = useWidth();
+  const { width: windowWidth } = useWindowDimensions();
 
   return (
     <div>
       <TopPanel></TopPanel>
       <SecondPanel></SecondPanel>
       {windowWidth > 750 ? <ThirdSection></ThirdSection> : ""}
-
-      <TaskRowSection></TaskRowSection>
+      <TaskRowSection></TaskRowSection>{" "}
     </div>
   );
 };

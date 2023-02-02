@@ -1,9 +1,8 @@
 import styles from "../../../styles/leftSideBar.module.css";
-import { useWidth } from "../hooks/useWindowDimensions";
+import useWindowDimensions from "../hooks/dimensioner";
 
 export const DashboardMenuItem = ({ ev }) => {
-  const windowWidth = useWidth();
-
+  const { width: windowWidth } = useWindowDimensions();
   return (
     <>
       <div className={styles.dashboardMenuItem}>

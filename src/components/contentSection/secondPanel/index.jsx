@@ -9,10 +9,9 @@ import {
   plusSvg,
 } from "../../../../data/svg";
 import { contentSecondPanelItemsArray } from "../../../../data/contentSecondPanelItems";
-import { useWidth } from "../../hooks/useWindowDimensions";
+import useWindowDimensions from "../../hooks/dimensioner";
 export const SecondPanel = () => {
-  const windowWidth = useWidth();
-
+  const { width: windowWidth } = useWindowDimensions();
   return (
     <div className={styles.mainContainer}>
       <div className={styles.lefter}>

@@ -1,11 +1,10 @@
 import styles from "../../../styles/leftSideBar.module.css";
 import { Content } from "./content";
 import { dashboardSvg } from "../../../data/svg";
-import { useWidth } from "../hooks/useWindowDimensions";
+import useWindowDimensions from "../hooks/dimensioner";
 
 export const LeftSideBar = () => {
-  const windowWidth = useWidth();
-
+  const { width: windowWidth } = useWindowDimensions();
   return (
     <>
       {windowWidth > 750 ? (

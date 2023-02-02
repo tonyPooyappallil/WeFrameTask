@@ -7,10 +7,9 @@ import {
   bellSvg,
 } from "../../../../data/svg";
 import { contentTopPanelItemsArray } from "../../../../data/contentTopPanelItems";
-import { useWidth } from "../../hooks/useWindowDimensions";
+import useWindowDimensions from "../../hooks/dimensioner";
 export const TopPanel = () => {
-  const windowWidth = useWidth();
-
+  const { width: windowWidth } = useWindowDimensions();
   return (
     <div className={styles.outerContainer}>
       <div className={styles.mainContainer}>

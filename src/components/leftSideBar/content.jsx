@@ -6,10 +6,9 @@ import { DashboardMenuItem } from "./dashboardMenuItem";
 import { dashboardMenuItemsDouble } from "../../../data/dashboardMenuItems";
 import { dashboardProjectsItems } from "../../../data/dashboardProjectsItems";
 import { AddNewProject } from "./addNewProject";
-import { useWidth } from "../hooks/useWindowDimensions";
+import useWindowDimensions from "../hooks/dimensioner";
 export const Content = () => {
-  const windowWidth = useWidth();
-
+  const { width: windowWidth } = useWindowDimensions();
   return (
     <div className={styles.contentContainer}>
       <div className={styles.userContainer}>
