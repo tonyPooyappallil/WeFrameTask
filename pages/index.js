@@ -5,13 +5,6 @@ import { LeftSideBar } from "../src/components/leftSideBar";
 import { RightSideBar } from "../src/components/rightSideBar";
 import styles from "../styles/Home.module.css";
 
-function return_url(context) {
-  if (process.env.NODE_ENV === "production") {
-    return `https://${context.req.rawHeaders[1]}`;
-  } else if (process.env.NODE_ENV !== "production") {
-    return "http://localhost:3000";
-  }
-}
 export default function Home({ data = [] }) {
   return (
     <div className={styles.container}>
@@ -37,6 +30,13 @@ export default function Home({ data = [] }) {
 }
 
 export async function getStaticProps(context) {
+  function return_url(context) {
+    if (process.env.NODE_ENV === "production") {
+      return `https://${context.req.rawHeaders[1]}`;
+    } else if (process.env.NODE_ENV !== "production") {
+      return "http://localhost:3000";
+    }
+  }
   let url = return_url(context);
   const response = await fetch(`${url}/api/taskData`);
   console.log("response", response);
